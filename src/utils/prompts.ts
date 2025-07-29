@@ -45,13 +45,11 @@ const trimIndent = (text: string, separator: string = '\n') => {
  * @param systemMessage - Override the default system message.
  * @param additionalRequirements - Additional requirements to append to the critical requirements.
  * @param additionalInstructions - Additional instructions to append to the basic instructions.
- * @param bulletPointCount - The number of bullet points to generate. Default is 5.
  */
 export interface PromptOptions {
   systemMessage?: string
   additionalRequirements?: string[]
   additionalInstructions?: string[]
-  bulletPointCount?: number
 }
 
 /**
@@ -66,8 +64,9 @@ export const createResumeBulletsPrompt = (parameters: ResumeBulletPointParameter
     systemMessage = SYSTEM_MESSAGE,
     additionalRequirements = [],
     additionalInstructions = [],
-    bulletPointCount = parameters.bulletPointCount
   } = options
+
+  const bulletPointCount = parameters.bulletPointCount || 5
 
   const allRequirements = [...CRITICAL_REQUIREMENTS, ...additionalRequirements]
   const allInstructions = [...INSTRUCTIONS, ...additionalInstructions]
