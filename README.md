@@ -79,42 +79,6 @@ npm run build
 - **Storage**: LocalStorage with client-side encryption
 - **UI Components**: Custom reusable components with TypeScript interfaces
 
-## Project Structure
-
-```
-src/
-├── App.tsx                    # Main application component
-├── main.tsx                   # Application entry point
-├── index.css                  # Global styles and Tailwind imports
-├── components/                # Reusable UI components
-│   ├── APISetup.tsx          # API configuration interface
-│   ├── BulletPointItem.tsx   # Individual bullet point display
-│   ├── BulletPointsOutput.tsx # Generated results display
-│   ├── GenerateButton.tsx    # Generation trigger with number input
-│   ├── Header.tsx            # Application header
-│   ├── HistoryItem.tsx       # History item display
-│   ├── InputForm.tsx         # Main input form container
-│   ├── JobDetailsForm.tsx    # Job details input section
-│   ├── NumberInput.tsx       # Custom number input component
-│   ├── RunHistory.tsx        # History management
-│   ├── TabNavigation.tsx     # Tab navigation component
-│   └── WorkExperienceForm.tsx # Work experience input section
-├── services/                  # API and data services
-│   ├── anthropic.ts          # Anthropic API service
-│   ├── history.ts            # History management service
-│   ├── openai.ts             # OpenAI API service
-│   ├── proxy.ts              # Main service orchestrator
-│   └── storage.ts            # Secure storage service
-├── types/                     # TypeScript type definitions
-│   ├── api.ts               # API request/response types
-│   ├── history.ts           # History data types
-│   └── services.ts          # Service interface types
-├── utils/                     # Utility functions
-│   ├── prompts.ts           # AI prompt generation
-│   └── utils.ts             # General utilities
-└── lib/
-    └── utils.ts             # Tailwind utility functions
-```
 
 ## Usage
 
